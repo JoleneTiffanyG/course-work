@@ -2,7 +2,7 @@
 Tiffany Gross
 09/11/18
 
-["Hello World!" Sketch]()
+["Hello World!" Sketch](https://jolenetiffanyg.github.io/course-work/hw-3/01_hello-world/)
 
 ### Work I Did This Homework Cycle
   I didn't have a very strong grip on  what went on the *last* homework cycle,  even after successfully completing the assignment. So I had to begin by reading back through the materials provided for week two so that I felt I had the introductory information at least somewhat established before trying to add more.  I also began reading the **p5.js** book I got in the mail, and did some independent research so that I now have a basic understanding of what the **p5** library actually is with relation to **javascript** and web browsers.  I then finally began reading through the course information provided for week 3 and took notes, then followed the assignment instruction steps.
