@@ -23,8 +23,8 @@ Tiffany Gross
 - Added directory `/hw-3` to the end of the url to navigate to my `index.html`
 - Wrote my **readme** in the empty-project file
 - Committed and pushed changes to repository
-- Took a screenshot of my image with my signature on it using 
-- Submit link to Moodle
+- Took a screenshot of my image with my signature on it using `if (mouseIsPressed === true) { line(mouseX, mouseY, pmouseX, pmouseY); }`
+- Submitted links to Moodle
 
 ### Problems and Issues
 I first was completely stumped just trying to see my directory path and files within **GitHub Desktop** and on **GitHub**. Everything looked fine on Atom.  After posting on the **Issues Forum** and getting a lot of guidance from a wonderful classmate, it turned out that there was an excess of `git.` files clogging up the works.  I assume these were there because when I originally was trying to download **p5.js** I was under the impression that it was a program I was supposed to run, rather than a library I needed for language reference.  So I kept downloading it over and over again thinking it wasn't working properly.  After getting rid of those I was able to proceed.  I then had a ton of confusion with the **index.html** file and understanding how to get it to show up in my link.  I gained a somewhat better understanding of the issue by rereading the lesson and links provided, and I did some googling but I'm still having trouble understanding the language used by the people who are asking and responding to troubleshooting questions on most forums.  Fortunately we have our class forum and some extremely helpful classmates, without whom I would not be able to keep up in this class.
