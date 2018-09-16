@@ -1,4 +1,4 @@
-# hw-3 readme
+# hw-4 readme
 Tiffany Gross
 09/16/18
 
@@ -16,6 +16,7 @@ Tiffany Gross
   - emptied the content still in the sketch from copying the `hw-3` folder
   - declared a `draw()` function
   - started playing around with commands I learned on the **p5** reference pages
+  - got some graph paper and played around with `translate()` to make sure I understood how changing the point of origin works and when it will be helpful
   - commented each line as I went using `//` so I could more easily orient myself when I wanted to go back and make changes
   - kept the `index.html` open in my browser so I could refresh the page after each change to see how it looked
 - Committed changes to the repository and pushed to **GitHub**
