@@ -34,8 +34,9 @@ Tiffany Gross
     stroke(255, 0, 0);
     line(touchX, touchY, ptouchX, ptouchY);
     returnfalse;
-  } ```
-  
+  } 
+  ```
+
   However, this was no more effective than using what I originally had, so I stuck with the `mouse` command rather than `touch`. According to what I gathered from forum postings where others were running into this difficulty, it seems to stem from the fact that **JS** uses the same variables for `touch(x)` or `mouse(x)`.  There were some who seemed to think that this was an OS-specific issue, but the overall concensus was that the results varied *somewhat* depending on which browser was used, though the issue will persist regardless.  It sounds like this is a bug that needs fixed, but I'm sure there is someone out there who has found a perfect workaround and I'm hoping soon I will understand enough to be able to find a fix for this and make use of it.
 
 ### To Discuss further
