@@ -85,7 +85,6 @@ point( 350, 227 );
 point( 150, 282 );
 pop();
 
-
 // Define velocity of rotation for gleam in pupil
 x = x + .1;
 
