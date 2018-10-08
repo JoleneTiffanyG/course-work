@@ -7,7 +7,7 @@ Tiffany Gross
 ### Work I Did This Homework Cycle
   Once again I spent a ton of time looking at and testing out the examples on the **p5.js** website.  I also used the book and tried some examples provided there.  After reading through the lesson pages for this week I had to try everything out and spend time changing each little piece of a given piece of code to try and understand how it affected the appearance or speed of the image.
 
-### Steps Taken to Complete **hw-4** Assignment
+### Steps Taken to Complete **hw-6** Assignment
 
 - I copied the entire folder `hw-5` and then renamed everything and replaced the contents
 - I opened the copy of `sketch.js` in **Atom** and:
