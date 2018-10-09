@@ -1,7 +1,7 @@
 
 
 let ball = {};
-ball.width = 70;
+ball.width = 40;
 ball.x = 10;
 ball.y = 10;
 ball.delta_x = 1;
@@ -11,17 +11,15 @@ ball.scale_y = 1;
 
 function setup() {
     createCanvas(windowWidth, 400);
-    background( 'rgb(10, 45, 10)' );
+    background(0);
 }
 
 
 
 function draw() {
 
-
     ball.x += ball.delta_x * ball.scale_x;
     ball.y += ball.delta_y * ball.scale_y;
-
 
 
     if (ball.x >= width || ball.x <= 0) {
@@ -31,7 +29,7 @@ function draw() {
         ball.delta_y = -1 * ball.delta_y;
     }
 
-    fill(random(255), random(255), random(255));
+    fill(255);
     ellipse(ball.x, ball.y, ball.width, ball.width);
 }
 
