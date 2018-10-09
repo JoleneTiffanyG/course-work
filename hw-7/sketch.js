@@ -2,7 +2,7 @@
 
 let ball = {};
 ball.width = 70;
-ball.x = 10;
+ball.x = 1530;
 ball.y = 10;
 ball.delta_x = 1;
 ball.delta_y = 1;
