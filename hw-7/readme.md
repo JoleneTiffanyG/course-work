@@ -1,5 +1,5 @@
-Tiffany Gross,
-Section A
+Tiffany Gross
+Group b
 
 [Altered Ball Sketch](https://jolenetiffanyg.github.io/course-work/hw-7/)
 
