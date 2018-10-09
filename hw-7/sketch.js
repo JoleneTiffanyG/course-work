@@ -3,9 +3,9 @@
 let ball = {};
 ball.width = 70;
 ball.x = 1530;
-ball.y = 10;
+ball.y = 400;
 ball.delta_x = 1;
-ball.delta_y = 1;
+ball.delta_y = -1;
 ball.scale_x = 1;
 ball.scale_y = 1;
 
