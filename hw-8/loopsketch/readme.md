@@ -8,18 +8,18 @@ Tiffany Gross
   I watched three of Daniel Schiffman's Youtube tutorials about six times apiece.  I read through the lesson material and used provided examples from there and from the p5.js website.  I altered the example material and tried out different loops.  I spent several hours troubleshooting because of a missing curly bracket.  Then opened this sketch and wrote a very simple sketch of ellipses that filled the screen but left some canvas visible behind, and a large centered ellipse that changed size with the x position of the mouse.
 
 ### Steps Taken to Complete **hw-8** Assignment
- -Review lesson material
- -watch Schiffman tutorials
- -reviewed loops in the p5 book
- -reviewed loops on the p5 website
- -copied and altered practice loops
- -wrote my own loop
- -nested an additional loop within that loop
- -wrote a map function
- -finished my readme.
--pushed to Github
--uploaded live link and repo to Moodle
--read issues forum
+ - Review lesson material
+ - watch Schiffman tutorials
+ - reviewed loops in the p5 book
+ - reviewed loops on the p5 website
+ - copied and altered practice loops
+ - wrote my own loop
+ - nested an additional loop within that loop
+ - wrote a map function
+ - finished my readme.
+- pushed to Github
+- uploaded live link and repo to Moodle
+- read issues forum
 
 ### Problems and Issues
 
