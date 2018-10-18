@@ -23,7 +23,7 @@ Tiffany Gross
 
 ### Problems and Issues
 
-I spend an obscene amount of time frustrated on this project.  I guess I got a little cocky and forgot about the simple mistakes since it was an easy week.  So whicle I feel faaairly confident about using loops and nested loops, I ended up spending several hours thinking I could not possibly do this project, all because I forgot I needed a third curly bracket at the end of everything.
+I spend an obscene amount of time frustrated on this project.  I guess I got a little cocky and forgot about the simple mistakes since it was an easy week.  So while I feel faaairly confident about using loops and nested loops, I ended up spending several hours thinking I could not possibly do this project, all because I forgot I needed a third curly bracket at the end of everything.  So basically I need to remember not to get too overwhelmed and to definitely always sweat the small stuff.
 
 ### To Discuss further
 
