@@ -1,8 +1,12 @@
 
-// Define variables to base off for rate of rotation
+/** Define variables to base off for rate of rotation
 let x = 0;
 let y = .1;
 let z = .1;
+*/
+
+// Declare an array
+var c = [];
 
 // Declare the setup function
 function setup() {
@@ -25,8 +29,49 @@ function draw() {
 // Background command after draw function to reset background each frame
 background( 'black');
 
-push();
 
+
+// Allow movement of mouse to affect image scale and stretch both horizontally and vertically
+scale(mouseX / 100, mouseY / 100);
+
+// Draw overlapping line of "faces"
+face(50, 50);
+face(100, 100);
+face(150, 150);
+face(200, 200);
+face(250, 250);
+face(300, 300);
+face(350, 350);
+face(400, 400);
+
+// Create new function "face"
+function face(a, b) {
+
+push();
+// Create purple ellipse
+fill('rgba(90, 40 ,100, 1)')
+ellipse( a, b, 100, 100 );
+
+
+// Create red ellipse
+fill('rgba(255, 50, 50, 1)')
+ellipse( a, b, 40, 40 );
+
+// Create blue-purple ellipse
+fill('rgba(50,50,150, 1)')
+ellipse( a, b, 28, 28 )
+
+// Create yellow ellipse
+fill('yellow')
+ellipse( a, b, 16, 16 );
+
+pop();
+}
+
+
+
+/**
+push();
 translate(width/2, height/2);
 fill('rgba(70, 200, 70, 1)')
 ellipse( 0, 0, 500, 500 );
@@ -47,25 +92,6 @@ ellipse(frameCount % 100, 0, 40, 40);
 // End translate based on width and height of canvas
 pop();
 
-// Allow movement of mouse to affect image scale and stretch both horizontally and vertically
-scale(mouseX / 100, mouseY / 100);
-
-// Create purple ellipse
-fill('rgba(90, 40 ,100, 1)')
-ellipse( 250, 100, 130, 130 );
-
-
-// Create red ellipse
-fill('rgba(255, 50, 50, 1)')
-ellipse( 250, 80, 40, 40 );
-
-// Create blue-purple ellipse
-fill('rgba(50,50,150, 1)')
-ellipse( 250, 80, 28, 28 )
-
-// Create yellow ellipse
-fill('yellow')
-ellipse( 250, 80, 16, 16 );
 
 // Create elongated black ellipse rotating at constant rate of motion
 push();
@@ -101,5 +127,7 @@ y = y + .2
 
 // Define velocity of rotation for second green ellipse
 z = z - .2
+*/
+
 
   }
