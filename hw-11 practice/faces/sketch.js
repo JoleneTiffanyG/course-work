@@ -1,66 +1,68 @@
-let orb;
 
-function setup() {
-    // create canvas
-    createCanvas( 600, 600 );
+let orb = [];
+let numb = 17;
 
-    // create a new ball object of class type "Ball"
-    orb = new Orb(0, 0, 50, 'green');
+function setup(){
+  createCanvas (600, 600);
+
+background('black');
+
+  for (let i = 0; i < numb; i++) {
+    orb.push ( new Orbs());
+  }
 }
 
-function draw() {
-    background(0);
+function draw(){
 
-    // call the ball's methods
-    orb.display();
-    orb.move();
-    orb.edgeCheck();
-  //  orb.implode();
+  background(orb_color);
+  frameRate(20);
+
+  for ( i = 0; i < orb.size; i++){
+    let beginX = random(0, 600);
+    let beginY = random(-600, 0);
+    orb[i].frame(beginX, beginY);
+  }
 }
-class Orb {
-    constructor(x, y, size, color) {
-        this.color = color;
-        this.size = size;
-        this.rad = this.size / 2;
-        this.posX = x;
-        this.posY = y;
-        this.deltaX = (-2, 2);
-        this.deltaY = (-2, 2);
-    }
 
-    display() {
-        push();
-        // remove the balls outer stroke
-        noStroke();
-        // set the balls fill color
-        fill(this.color);
-        // set the position of the ball
-        translate(this.posX, this.posY);
-        ellipse(300, 300, this.size);
-        pop();
-    }
-    move() {
-           this.posX += this.deltaX;
-           this.posY += this.deltaY;
-       }
+class Orbs{
 
-       /*implode() {
-         if (this.posX = width/2 || this.size = 0) {
-           this.deltaX *= -1;
-         }
-         if (this.posY = height/2 || this.size = 0) {
-           this.deltaY *= -1;
-         }
-*/
-      edgeCheck() {
-           // check if the ball has hit a vertical wall (left or right walls)
-           if( this.posX + this.rad >= width || this.posX - this.rad <= 0) {
-               this.deltaX *= -1;
-           }
-           // check if the ball has hit a horizontal wall (top or bottom walls)
-           if( this.posY + this.rad >= height || this.posY - this.rad <= 0) {
-               this.deltaY *= -1;
-           }
+  constructor(){
 
-       }
-     }
+    this.orb_color = 'rgb(200, 255, 160)';
+    this.x = random (0, 600);
+    this.y = random (-600, 0);
+    this.size_w = random(5, 20);
+    this.size_h = random(5, 20);
+    this.mov_x = random(0, 600);
+    this.mov_y = random(0, 600);
+
+  }
+
+  frame(){
+    this.orb();
+    this.again();
+    this.show();
+  }
+
+//move the orbs
+  orb(){
+    this.x -= 0.1;
+    this.y += random (1, 5);
+  }
+
+
+//continue movement
+  again(){
+
+    if( this.y > height ){
+     this.y = random( -100, 0 );
+     this.x = random( 0, 600 );
+   }
+  }
+
+//display the orbs
+  show(){
+    fill(this.orb_color);
+    ellipse(this.x, this.y, this.size_w, this.size_h);
+  }
+}

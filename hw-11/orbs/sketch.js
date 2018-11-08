@@ -1,76 +1,66 @@
-//define variable for orbs for Orb class
-let orb;
+let orb = [];
+let numb = 17;
 
-//define array for orbs
-let o = [];
-let numer_os = 10;
-let each_color;
+function setup(){
+  createCanvas (600, 600);
 
-// Declare the setup function
-function setup() {
+background('black');
 
-  // create a canvas 600px wide and 600px high
-  createCanvas( 600, 600 );
-
-
-
-
-  // create new orb object of class type "Orb"
-  orb = new Orb(width / 2, height / 2, 50, 'green');
+  for (let i = 0; i < numb; i++) {
+    orb.push ( new Orbs());
+  }
 }
 
+function draw(){
 
-// Declare the draw function
-function draw() {
+  background(orb_color);
+  frameRate(20);
 
-// Background command after draw function to reset background each frame
-background( 'black');
-
-// call methods for orb
-orb.display();
-orb.move();
-orb.implode();
-
+  for ( i = 0; i < orb.size; i++){
+    let beginX = random(0, 600);
+    let beginY = random(-600, 0);
+    orb[i].frame(beginX, beginY);
+  }
 }
 
+class Orbs{
 
-//define Orb class and methods
-class Orb {
-  constructor( x, y, size, color ) {
-    this.color = color;
-    this.size = size;
-    this.posX = x;
-    this.posY = y;
-    this.deltaX = random(10, 10);
-    this.deltaY = random(10, 10);
+  constructor(){
+
+    this.orb_color = 'rgba(200, 255, 160, 1)';
+    this.x = random (0, 600);
+    this.y = random (-600, 0);
+    this.size = random(5, 20);
+    this.mov_x = random(0, 600);
+    this.mov_y = random(0, 600);
 
   }
 
-//declare "show" method
-show() {
-  push();
-  fill(this.color);
-  translate(this.posX, this.posY);
-  ellipse(0, 0, this.size);
-  pop();
+  frame(){
+    this.orb();
+    this.again();
+    this.show();
+  }
 
-}
-
-//declare "move" method
-move() {
-  this.posX +- this.deltaX;
-  this.posY +- this.deltaY;
-
-}
+//move the orbs
+  orb() {
+    this.x -= 0.1;
+    this.y += random (1, 5);
+  }
 
 
-//cause orbs to disappear when they hit the center of the canvas
-implode() {
-  if( this.posX = width/2 || this.size = this.size - this.size )
-  if ( this.posY = height/2 || this.size = this.size - this.size )
+//continue movement
+  again(){
 
-}
+    if( this.y > height ){
+     this.y = random( -100, 0 );
+     this.x = random( 0, 600 );
+   }
+  }
 
-}
-
+//display the orbs
+  show() {
+    fill('this.orb_color');
+    ellipse(this.x, this.y, this.size_w, this.size_h);
+  }
 }
