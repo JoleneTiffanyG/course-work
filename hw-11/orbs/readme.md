@@ -33,7 +33,7 @@ Tiffany Gross
 
 ### Problems and Issues
 
-I'm still pretty confused by the application of this concept.  I still don't know what mistakes I was making.
+I'm still pretty confused by the application of this concept.  I still don't know what all mistakes I was making.  I just kept getting a black canvas, so the code wasn't toootally broken.  I found most of the mistakes but in the end I ended up needing help to get the last bit to work and when it finally worked I didn't know which of the things I had just done were responsible for making it work.
 
 ### To Discuss further
 

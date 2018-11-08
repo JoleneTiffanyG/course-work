@@ -1,68 +1,80 @@
 
-let orb = [];
-let numb = 17;
+let snow = [];
+let flakes = 50;
+let bg_color;
 
 function setup(){
-  createCanvas (600, 600);
+  createCanvas (windowWidth, 600);
 
-background('black');
+bg_color = color(1, 0, 34);
 
-  for (let i = 0; i < numb; i++) {
-    orb.push ( new Orbs());
+  for (let i = 0; i < flakes; i++) {
+    snow.push ( new Blizzard());
   }
 }
 
 function draw(){
 
-  background(orb_color);
-  frameRate(20);
+  background(bg_color);
+  frameRate(24);
 
-  for ( i = 0; i < orb.size; i++){
-    let beginX = random(0, 600);
+  for ( i = 0; i < snow.length; i++){
+    let beginX = random(0, windowWidth);
     let beginY = random(-600, 0);
-    orb[i].frame(beginX, beginY);
+    snow[i].frame(beginX, beginY);
   }
 }
 
-class Orbs{
+class Blizzard{
+
 
   constructor(){
 
-    this.orb_color = 'rgb(200, 255, 160)';
-    this.x = random (0, 600);
+    this.snow_color = 'rgb(255, 255, 245)';
+    this.melted_color = 'rgb(200, 200, 255)';
+    this.x = random (0, windowWidth);
     this.y = random (-600, 0);
-    this.size_w = random(5, 20);
-    this.size_h = random(5, 20);
-    this.mov_x = random(0, 600);
-    this.mov_y = random(0, 600);
+    this.size_w = random(2, 10);
+    this.size_h = random(2, 10);
+    this.melt_x = random(0, windowWidth);
+    this.melt_y = random(575, 600);
 
   }
 
   frame(){
-    this.orb();
-    this.again();
+    this.snow();
+    this.continue();
+    this.melt();
     this.show();
   }
 
-//move the orbs
-  orb(){
+//snow movement
+  snow(){
     this.x -= 0.1;
     this.y += random (1, 5);
   }
 
 
-//continue movement
-  again(){
+//continue to snow
+  continue(){
 
     if( this.y > height ){
      this.y = random( -100, 0 );
-     this.x = random( 0, 600 );
+     this.x = random( 0, windowWidth );
    }
   }
 
-//display the orbs
+//show the snow
   show(){
-    fill(this.orb_color);
+    fill(this.snow_color);
     ellipse(this.x, this.y, this.size_w, this.size_h);
   }
+
+//melt effect that didnt take
+    melt(){
+      if (this.y > height){
+        this.y = this.melt_y;
+        this.x = this.melt_x;
+      }
+    }
 }
