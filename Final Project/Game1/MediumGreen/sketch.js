@@ -54,9 +54,9 @@ function draw() {
         // make the spheres check themselves
         // to see if the mouse is within them.
         for (let i = sphere2.length - 1; i >= 0; i--) {
-            let destroyMe = sphere2[i].mouseCheck();
-            if (destroyMe) {
-                bubbles.splice(i, 1);
+            let destroy = sphere2[i].mouseCheck();
+            if (destroy) {
+                sphere2.splice(i, 1);
             }
         }
     }
