@@ -156,7 +156,7 @@ function draw() {
                                }
 
 
-                               mouseCheck() {
+                              /* mouseCheck() {
                                    // get distance between mouse and sphere center
                                    let d = dist(this.posX2, this.pos2, mouseX, mouseY);
                                    // check if distance is less than radius of sphere
@@ -167,7 +167,7 @@ function draw() {
                                        return false;
                                    }
                                }
-
+*/
 
                            }
                        }
