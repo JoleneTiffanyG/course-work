@@ -54,25 +54,12 @@ function draw() {
         // make the spheres check themselves
         // to see if the mouse is within them.
         for (let i = sphere2.length - 1; i >= 0; i--) {
-            let destroy = sphere2[i].mouseCheck();
+            let destroy = spheres2[i].mouseCheck();
             if (destroy) {
                 sphere2.splice(i, 1);
             }
         }
     }
-
-  /*  mouseCheck() {
-       // get distance between mouse and sphere center
-       let d = dist(this.x2, this.y2, mouseX, mouseY);
-       // check if distance is less than radius of sphere
-       // if yes, mouse is inside
-       if (d < this.rad2) {
-           return true;
-       } else {
-           return false;
-       }
-   }
-*/
 
 
 
@@ -130,6 +117,20 @@ function draw() {
 
                }
            }
+
+            mouseCheck() {
+                // get distance between mouse and sphere center
+                let d = dist(this.posX2, this.posY2, mouseX, mouseY);
+                // check if distance is less than radius of sphere
+                // if yes, mouse is inside
+                if (d < this.rad2) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+
            sphereCheck(otherSpheres2, presentsphere2) {
                 //loop applying to all spheres contained in array
                    for (let m = 0; m < otherSpheres2.length; m++) {
@@ -156,18 +157,7 @@ function draw() {
                                }
 
 
-                              /* mouseCheck() {
-                                   // get distance between mouse and sphere center
-                                   let d = dist(this.posX2, this.pos2, mouseX, mouseY);
-                                   // check if distance is less than radius of sphere
-                                   // if yes, mouse is inside
-                                   if (d < this.rad2) {
-                                       return true;
-                                   } else {
-                                       return false;
-                                   }
-                               }
-*/
+
 
                            }
                        }

@@ -25,10 +25,18 @@ class Sphere {
         this.radius = radius;
         this.color = color ;
         this.stroke = 2.0 ;
-
-
+        this.deltaX = random(-5,5);
+        this.deltaY = random(-5,5);
 
     }
+
+move() {
+  this.x += this.deltaX;
+  this.y += this.deltaY;
+  return this;
+
+}
+
 
     display() {
         push() ;

@@ -1,8 +1,8 @@
 
 //define spheres array
-let spheres2 = [];
+let thirdspheres = [];
 //define number of spheres to be generated
-const numOfSpheres2 = 10;
+const numOfthirdSpheres = 10;
 
 function setup() {
 
@@ -11,8 +11,8 @@ function setup() {
   //define original positions of spheres
     let start_x2 = 60;
     let start_y2 = 60;
-    for (let e = 0; e < numOfSpheres2; e++) {
-        spheres2.push(new Sphere2(start_x2, start_y2));
+    for (let e = 0; e < numOfthirdSpheres; e++) {
+        thirdspheres.push(new thirdSphere(start_x2, start_y2));
 
     //make sure spheres don't overlap at the beginning
         start_x2 += 100;
@@ -39,7 +39,7 @@ function draw() {
     }
 
 //define Sphere2 class
-    class Sphere2 {
+    class Sphere {
         constructor(x2, y2, size2) {
             this.color2 = 'green';
             this.size2 = (15, 50);
