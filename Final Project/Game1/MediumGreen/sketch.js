@@ -3,7 +3,7 @@
 let spheres2 = [];
 
 
-let myFirstSphere ;
+let FirstSphere ;
 
 
 //define number of spheres to be generated
@@ -53,10 +53,10 @@ function draw() {
     function mousePressed() {
         // make the spheres check themselves
         // to see if the mouse is within them.
-        for (let i = sphere2.length - 1; i >= 0; i--) {
+        for (let i = spheres2.length - 1; i >= 0; i--) {
             let destroy = spheres2[i].mouseCheck();
             if (destroy) {
-                sphere2.splice(i, 1);
+                spheres2.splice(i, 1);
             }
         }
     }
