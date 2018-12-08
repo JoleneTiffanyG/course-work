@@ -1,6 +1,6 @@
 
 // Declare an array
-var sentence = ["nice!", "good one!", "not too shabby", "really?", "come on", "get it!"];
+var sentence = ["points:", "points:2", "points:4", "points:6", "points:8", "points:10", "points:12", "points:14", "points:16", "points:18", "points:20","points:22", "points:24", "You Win!!"];
 
 // Start at first index
 var indices = 0;
@@ -13,7 +13,7 @@ let spheres = [];
 
 
 //define number of spheres to be generated
-const numOfSpheres = 10;
+const numOfSpheres = 8;
 
 function setup() {
 
@@ -44,11 +44,13 @@ function draw() {
     background('black');
 
 
-//Spheres2.display ;
-//myFirstSphere.display();
-
 
 //keep code within the draw function so that the image refreshes with each iteration
+
+
+fill('rgba(100,110,210, .8)');
+textSize(70);
+text(sentence[indices], 10, 520);
 
     for (let e = 0; e < spheres.length; e++) {
 
@@ -68,6 +70,13 @@ function mousePressed() {
         let destroy = spheres[i].mouseCheck();
         if (destroy) {
             spheres.splice(i, 1);
+
+            indices += 1
+            if (indices > sentence.length) {
+              indices = 0;
+          }
+
+          console.log(sentence[indices]);
         }
     }
 }
@@ -78,7 +87,7 @@ function mousePressed() {
 class Sphere {
     constructor(x2, y2, rad, color) {
         this.color = color;
-        this.size = (15, 20);
+        this.size = (15, 30);
         this.rad = this.size / 2;
         this.posX = x2;
         this.posY = y2;
@@ -174,7 +183,7 @@ class secondSphere extends Sphere {
     constructor(x2,y2,size2) {
         const rad2 = size2/2 ;
         super(x2,y2,rad2,"purple") ;
-        this.size = (15, 20);
+        this.size = (15, 40);
         this.posX = x2*4;
         this.posY = y2*4;
         this.deltaX = random(-3, 3);
@@ -186,7 +195,7 @@ class thirdSphere extends Sphere {
     constructor(x2,y2,size2) {
         const rad2 = size2/2 ;
         super(x2,y2,rad2,"yellow") ;
-        this.size = (7, 9);
+        this.size = (9, 12);
         this.posX = x2*6;
         this.posY = y2*6;
         this.deltaX = random(-4, 4);
@@ -195,7 +204,7 @@ class thirdSphere extends Sphere {
     }
 
 
-    fill('rgba(100,110,210, .8)');
+    fill('rgba(130,110,210, .8)');
     textSize(70);
     text(sentence[indices], 10, 250);
 

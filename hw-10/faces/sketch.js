@@ -98,7 +98,7 @@ fill('rgba(100,110,210, .8)');
 textSize(70);
 text(sentence[indices], 10, 250);
 
-
+}
 
 function mousePressed() {
   indices = indices + 1;
