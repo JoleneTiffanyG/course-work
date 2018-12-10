@@ -1,6 +1,6 @@
 
 // Declare an array
-var sentence = ["points:", "points:2", "points:4", "points:6", "points:8", "points:10", "points:12", "points:14", "points:16", "points:18", "points:20","points:22", "points:24", "You Win!!"];
+var sentence = ["click a ball to start", "points:2", "points:4", "points:6", "points:8", "points:10", "points:12", "points:14", "points:16", "points:18", "points:20","points:22", "points:24", "Bonus Level!!", "bonus! +10", "bonus! +10", "bonus! +10", "bonus! +10","bonus! +10", "bonus! +10", "VICTORY!" ];
 
 // Start at first index
 var indices = 0;
@@ -205,7 +205,7 @@ class thirdSphere extends Sphere {
 
 
     fill('rgba(130,110,210, .8)');
-    textSize(70);
+    textSize(20);
     text(sentence[indices], 10, 250);
 
 
@@ -214,6 +214,27 @@ class thirdSphere extends Sphere {
 
     if (indices == 6) {
       indices = 0;
+
+      var sun;
+
+      function preload() {
+
+
+      sun = loadAnimation('Gross_A13_gifanimation0000.jpg, Gross_A13_gifanimation0001.jpg');
+
+      }
+
+      function setup() {
+        createCanvas(800, 800);
+      }
+
+        function draw() {
+          background(255);
+
+          animation(sun, 100, 100);
+
+        }
+
     }
 
     }
