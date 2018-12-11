@@ -62,7 +62,6 @@ text(sentence[indices], 10, 520);
     }
 }
 
-
 function mousePressed() {
     // make the spheres check themselves
     // to see if the mouse is within them.
@@ -71,6 +70,7 @@ function mousePressed() {
         if (destroy) {
             spheres.splice(i, 1);
 
+//referring to the text indices defined above, create a point counter for when spheres are spliced out of the array
             indices += 1
             if (indices > sentence.length) {
               indices = 0;
@@ -215,6 +215,9 @@ class thirdSphere extends Sphere {
     if (indices == 6) {
       indices = 0;
 
+
+// This part is an animation. The code is not broken but it returns the message "Loading.." in my browser.
+// *Leaving it in just in case it works in your browser, because in theory this bit is all correctly done.
       var sun;
 
       function preload() {
